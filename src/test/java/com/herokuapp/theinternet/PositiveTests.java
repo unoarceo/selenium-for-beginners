@@ -38,7 +38,6 @@ public class PositiveTests {
         password.sendKeys(strPassword);
 
         //click login button
-        //driver.findElement(new By.ByClassName("radius")).click();
         driver.findElement(new By.ByXPath("//button[@class='radius']")).click();
 
         //verifications
