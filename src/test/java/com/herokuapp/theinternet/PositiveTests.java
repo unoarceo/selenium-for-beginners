@@ -1,5 +1,6 @@
 package com.herokuapp.theinternet;
 
+import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -42,6 +43,10 @@ public class PositiveTests {
 
         //verifications
         //- new url
+        if(!driver.getCurrentUrl().equals("https://the-internet.herokuapp.com/secure"))
+            Assert.fail();
+        System.out.println(driver.getCurrentUrl());
+
         //- logout button is visible
         //- successful login message
 
