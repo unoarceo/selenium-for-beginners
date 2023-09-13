@@ -1,11 +1,12 @@
 package com.herokuapp.theinternet;
 
-import org.testng.annotations.Test;
+
+import org.junit.jupiter.api.Test;
 
 public class NegativeTests {
 
     @Test
-    public void InvalidPassword(){
+    public void invalidPassword() throws InterruptedException{
 
     }
 }

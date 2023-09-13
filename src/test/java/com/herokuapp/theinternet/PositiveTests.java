@@ -1,11 +1,13 @@
 package com.herokuapp.theinternet;
 
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.Assert;
-import org.testng.annotations.Test;
+
 
 
 
@@ -17,7 +19,7 @@ public class PositiveTests {
         System.out.println("Starting loginTest");
 
         //Create Chrome driver
-        System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver.exe");
+        //System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver.exe");
         WebDriver driver = new ChromeDriver();
 
 
@@ -52,7 +54,7 @@ public class PositiveTests {
         System.out.println("Actual: ".concat(driver.getCurrentUrl()));
         if(!driver.getCurrentUrl().equals(strExpectedURL)) {
             System.out.println("Result: FAIL");
-            Assert.fail();
+            Assertions.fail();
         }else
             System.out.println("Result: PASS");
 
@@ -68,7 +70,7 @@ public class PositiveTests {
 
         if (strExpectedSuccessMessage.compareTo(strActualSuccessMessage) != 0) {
             System.out.println("Result: FAIL");
-            Assert.fail();
+            Assertions.fail();
         }else
             System.out.println("Result: PASS");
 
@@ -84,7 +86,7 @@ public class PositiveTests {
 
         if (strExpectedHeader.compareTo(strActualHeader) != 0 ){
             System.out.println("Result: FAIL");
-            Assert.fail();
+            Assertions.fail();
         }else
             System.out.println("Result: PASS");
 
@@ -99,7 +101,7 @@ public class PositiveTests {
 
         if (strExpectedContent.compareTo(strActualContent) != 0 ){
             System.out.println("Result: FAIL");
-            Assert.fail();
+            Assertions.fail();
         }else
             System.out.println("Result: PASS");
 
@@ -111,13 +113,13 @@ public class PositiveTests {
 
         if (!btnLogout.isDisplayed()){
             System.out.println("Result: FAIL - button is not displayed");
-            Assert.fail();
+            Assertions.fail();
         }else
             System.out.println("Result: PASS - button is displayed.");
 
         if (!btnLogout.isEnabled()){
             System.out.println("Result: FAIL - button is not enabled.");
-            Assert.fail();
+            Assertions.fail();
         }else
             System.out.println("Result: PASS - button is enabled.");
 
@@ -135,7 +137,7 @@ public class PositiveTests {
 
         if (strExpectedSuccessLogout.compareTo(strActualSuccessLogout) != 0){
             System.out.println("Result: FAIL");
-            Assert.fail();
+            Assertions.fail();
         }else
             System.out.println("Result: PASS");
 
@@ -148,7 +150,7 @@ public class PositiveTests {
 
         if (strExpectedURLLogout.compareTo(strActualURLLogout) != 0){
             System.out.println("Result: FAIL");
-            Assert.fail();
+            Assertions.fail();
         }else
             System.out.println("Result: PASS");
 
