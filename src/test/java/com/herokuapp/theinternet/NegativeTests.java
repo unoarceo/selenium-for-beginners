@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 public class NegativeTests {
 
     @Test
-    public void invalidPassword() throws InterruptedException{
+    public void invalidPassword() {
 
     }
 }
