@@ -2,15 +2,10 @@ package com.herokuapp.theinternet;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-
-
-
-
 
 public class PositiveTests {
 
@@ -28,6 +23,7 @@ public class PositiveTests {
 
         //open test page
         String url = "https://the-internet.herokuapp.com/login";
+
         driver.get(url);
         System.out.println("Page is open");
 
