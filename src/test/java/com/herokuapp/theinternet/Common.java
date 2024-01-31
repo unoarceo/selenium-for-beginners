@@ -14,7 +14,8 @@ public class Common {
     public String baseURL;
     public String UserName;
     public String Password;
-    public int WaitMS;
+    public int ElementWaitMS;
+    public int PageWaitMS;
 
 
     public Common(){
@@ -31,7 +32,8 @@ public class Common {
             baseURL = prop.getProperty("baseurl");
             UserName = prop.getProperty("username");
             Password = prop.getProperty("password");
-            WaitMS = Integer.parseInt(prop.getProperty("pageloadwaitms"));
+            ElementWaitMS = Integer.parseInt(prop.getProperty("elementwaitms"));
+            PageWaitMS = Integer.parseInt(prop.getProperty("pagewaitms"));
 
         } catch (FileNotFoundException e) {
             System.out.println("Property file not found!" + e.getMessage());
